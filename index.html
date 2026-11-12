@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMENAJAREA FLORESTI — ДО РАССВЕТА / DINAINTE DE ZORI</title>
+<meta name="description" content="AMENAJAREA FLORESTI, Флорешть — сайт-посвящение людям, которые выходят в город до рассвета.">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════ ШАПКА ═══════════════ -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">◤</span>
+    <span class="brand-name">AMENAJAREA&nbsp;FLORESTI</span>
+  </div>
+  <nav class="nav" id="nav" aria-label="Разделы">
+    <a class="nav-btn" href="#mesaj"   data-nav="mesaj"></a>
+    <a class="nav-btn" href="#contact" data-nav="contact"></a>
+    <a class="nav-btn" href="#oameni"  data-nav="oameni"></a>
+    <a class="nav-btn" href="#video"   id="navVideo" data-nav="video"></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Язык / Limba">
+    <button class="lang-btn" id="langRo" type="button">RO</button>
+    <button class="lang-btn" id="langRu" type="button">RU</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════ ГЕРОЙ: РЕЗИНОВЫЕ БУКВЫ ═══════════════ -->
+<section id="hero">
+  <img class="hero-photo" src="assets/img/background_day.jpg" alt="Улица Флорешти на рассвете, дворники AMENAJAREA FLORESTI">
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker mono" data-t="kicker"></p>
+    <h1 class="rubber" id="rubberTitle" aria-label="AMENAJAREA FLORESTI"></h1>
+    <p class="hero-sub" data-t="heroSub"></p>
+    <p class="hero-clock mono"><span data-t="clockLabel"></span> <span id="clock">--:--:--</span></p>
+    <p class="phase-line"><span class="phase-dot" aria-hidden="true"></span><span class="phase-text mono" id="phaseText" data-t="nowShift"></span></p>
+  </div>
+  <div class="quote-band">
+    <span class="quote-mark" aria-hidden="true">◆</span>
+    <span class="quote-text" data-t="heroQuote"></span>
+    <span class="quote-mark" aria-hidden="true">◆</span>
+  </div>
+</section>
+
+<!-- ═══════════════ 01 ОБРАЩЕНИЕ ═══════════════ -->
+<section id="mesaj" class="sec">
+  <header class="sec-head">
+    <span class="sec-num mono">01</span>
+    <h2 class="sec-title" data-t="mesajTitle"></h2>
+    <span class="sec-rule" aria-hidden="true"></span>
+  </header>
+  <div class="panel tilt" id="mesajPanel">
+    <span class="tick tick-tl" aria-hidden="true"></span>
+    <span class="tick tick-tr" aria-hidden="true"></span>
+    <span class="tick tick-bl" aria-hidden="true"></span>
+    <span class="tick tick-br" aria-hidden="true"></span>
+    <p class="mesaj-body" data-t="mesajBody"></p>
+    <p class="mesaj-hint mono" data-t="hint"></p>
+  </div>
+</section>
+
+<!-- ═══════════════ 02 КОНТАКТЫ ═══════════════ -->
+<section id="contact" class="sec">
+  <header class="sec-head">
+    <span class="sec-num mono">02</span>
+    <h2 class="sec-title" data-t="contactTitle"></h2>
+    <span class="sec-rule" aria-hidden="true"></span>
+  </header>
+  <div class="panel panel-contact tilt" id="contactPanel">
+    <span class="tick tick-tl" aria-hidden="true"></span>
+    <span class="tick tick-tr" aria-hidden="true"></span>
+    <span class="tick tick-bl" aria-hidden="true"></span>
+    <span class="tick tick-br" aria-hidden="true"></span>
+    <p class="contact-body" data-t="contactBody"></p>
+  </div>
+</section>
+
+<!-- ═══════════════ 03 ЛЮДИ: 23 КАРТОЧКИ-ПЕРЕВЁРТЫША ═══════════════ -->
+<section id="oameni" class="sec">
+  <header class="sec-head">
+    <span class="sec-num mono">03</span>
+    <h2 class="sec-title" data-t="oameniTitle"></h2>
+    <span class="sec-rule" aria-hidden="true"></span>
+  </header>
+  <p class="oameni-note mono" data-t="oameniNote"></p>
+  <div class="grid" id="workersGrid"></div>
+</section>
+
+<!-- ═══════════════ 04 ВИДЕО (появится, когда в media/ ляжет video.mp4) ═══════════════ -->
+<section id="video" class="sec" hidden>
+  <header class="sec-head">
+    <span class="sec-num mono">04</span>
+    <h2 class="sec-title" data-t="videoTitle"></h2>
+    <span class="sec-rule" aria-hidden="true"></span>
+  </header>
+  <div class="video-frame">
+    <video id="theVideo" controls playsinline preload="metadata"></video>
+  </div>
+  <p class="video-note mono" data-t="videoNote"></p>
+</section>
+
+</main>
+
+<!-- ═══════════════ ПОДВАЛ ═══════════════ -->
+<footer class="footer">
+  <p class="footer-line" data-t="footerLine"></p>
+  <p class="footer-small mono" data-t="footerSmall"></p>
+  <p class="footer-tip mono">Ctrl+E — режим редактора текстов</p>
+</footer>
+
+<!-- ═══════════════ ПАНЕЛЬ РЕДАКТОРА (появляется по Ctrl+E) ═══════════════ -->
+<div id="editbar" hidden>
+  <span class="editbar-tip mono">РЕЖИМ РЕДАКТОРА: правьте прямо на странице, затем «ОПУБЛИКОВАТЬ» — скачается texts.js</span>
+  <button id="btnPublish" class="btn btn-publish" type="button">ОПУБЛИКОВАТЬ</button>
+  <button id="btnExit"    class="btn btn-exit"    type="button">ВЫЙТИ БЕЗ СОХРАНЕНИЯ</button>
+</div>
+
+<script src="content/texts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
